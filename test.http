@@ -1,0 +1,47 @@
+
+### Obtiene la autorización
+POST http://www.slim.outboxfactory.com/public/login HTTP/1.1
+Content-Type: application/xml
+
+<request>
+    <email>prueba@prueba.com</email>
+    <password>Prueba123</password>
+</request>
+
+### lista todos los productos
+GET http://www.slim.outboxfactory.com/public/producto HTTP/1.1
+Content-Type: application/xml
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjAsImVtYWlsIjoicHJ1ZWJhQHBydWViYS5jb20iLCJuYW1lIjoiT3N2YWxkbyIsImlhdCI6MTY1MjkyMzE4MCwiZXhwIjoxNjUzNTI3OTgwfQ.d2IBhQXu1o0TygePjXbFXZyeb0qIhgvlvMi1IF8z3So
+
+
+### Inserta un producto nuevo
+POST http://www.slim.outboxfactory.com/public/producto HTTP/1.1
+Content-Type: application/xml
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjAsImVtYWlsIjoicHJ1ZWJhQHBydWViYS5jb20iLCJuYW1lIjoiT3N2YWxkbyIsImlhdCI6MTY1MjkyMzE4MCwiZXhwIjoxNjUzNTI3OTgwfQ.d2IBhQXu1o0TygePjXbFXZyeb0qIhgvlvMi1IF8z3So
+
+<form>
+    <name>Nuevo productox 2</name>
+    <description>Este es un excelente producto</description>
+</form>
+
+### Obtiene un producto
+GET http://www.slim.outboxfactory.com/public/producto/24 HTTP/1.1
+Content-Type: application/xml
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjAsImVtYWlsIjoicHJ1ZWJhQHBydWViYS5jb20iLCJuYW1lIjoiT3N2YWxkbyIsImlhdCI6MTY1MjkyMzE4MCwiZXhwIjoxNjUzNTI3OTgwfQ.d2IBhQXu1o0TygePjXbFXZyeb0qIhgvlvMi1IF8z3So
+
+
+### Edita un producto
+PUT http://www.slim.outboxfactory.com/public/producto/24 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjAsImVtYWlsIjoicHJ1ZWJhQHBydWViYS5jb20iLCJuYW1lIjoiT3N2YWxkbyIsImlhdCI6MTY1MjkyMzE4MCwiZXhwIjoxNjUzNTI3OTgwfQ.d2IBhQXu1o0TygePjXbFXZyeb0qIhgvlvMi1IF8z3So
+
+{
+    "name":"Producto modificado 4 b",
+    "description":"Descripción modificada 4 b"
+}
+
+### Elimina un producto
+DELETE http://www.slim.outboxfactory.com/public/producto/18 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjAsImVtYWlsIjoicHJ1ZWJhQHBydWViYS5jb20iLCJuYW1lIjoiT3N2YWxkbyIsImlhdCI6MTY1MjkyMzE4MCwiZXhwIjoxNjUzNTI3OTgwfQ.d2IBhQXu1o0TygePjXbFXZyeb0qIhgvlvMi1IF8z3So
+
